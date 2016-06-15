@@ -1,10 +1,12 @@
 <?php
-require 'vendor/autoload.php';
+namespace Relmek;
+
+require '../vendor/autoload.php';
 $config = array('host' => '192.168.1.224','user' => 'plato', 'password'=> 'mis123','database'=> 'phpbb3',);
 
 $dbConn = new \Simplon\Mysql\Mysql(    $config['host'],    $config['user'],    $config['password'],    $config['database']);
 //讀取卡鐘資料
-$lines = file("\card\card_data.txt");
+$lines = file("card_data.txt");
 
 foreach($lines as $line)
 {

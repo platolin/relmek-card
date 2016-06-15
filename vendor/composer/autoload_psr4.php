@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Simplon\\Mysql\\' => array($vendorDir . '/simplon/mysql/src'),
+    'Relmek\\' => array($baseDir . '/src/Relmek'),
 );
