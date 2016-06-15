@@ -11,12 +11,20 @@ class ComposerStaticInitbf01764ce35fbc7b758a6a3f44ba948b
         array (
             'Simplon\\Mysql\\' => 14,
         ),
+        'R' => 
+        array (
+            'Relmek\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Simplon\\Mysql\\' => 
         array (
             0 => __DIR__ . '/..' . '/simplon/mysql/src',
+        ),
+        'Relmek\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Relmek',
         ),
     );
 
