@@ -3,11 +3,12 @@
     "description": "卡鐘資料轉入MySQL",
     "version": "1.0",
     "require": {
-        "simplon/mysql": "^1.3"
+        "simplon/mysql": "^1.3",
+        "phpunit/phpunit": "5.4.*"
     },
     "autoload": {
         "psr-4": {
-            "Relmek\\": "src/Relmek"
+            "Relmek\\": "src"
         }
     }
 }
