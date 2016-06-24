@@ -4,19 +4,39 @@ use Relmek\Card;
 
 class CardTest extends TestCase
 {
-    public function testCardFileOpen() {
+    protected $filename;
 
-        $cardopen = new Card;
+    public static function setUpBeforeClass()
+    {
+        fwrite(STDOUT, __METHOD__ . "\n");
+    }
+
+    protected function setUp()
+    {
         //
-        $filename = __DIR__.'/card/card_data.txt';
-        $myfile = fopen($filename, 'w');
+        $this->filename = __DIR__.'/card/card_data.txt';
+        $myfile = fopen($this->filename, 'w');
         $txt =  date("YmdHi"). 'S037'.'\r\n';
         fwrite($myfile, $txt);
         $txt =  date("YmdHi"). 'S001'.'\r\n';
         fwrite($myfile, $txt);
         fclose($myfile);
+    }
+    public static function tearDownAfterClass()
+    {
+        fwrite(STDOUT, __METHOD__ . "\n");
+    }
 
-        $this->assertTrue( @$cardopen->open($filename) );
+    protected function tearDown()
+    {
+        unlink($this->filename);
+    }
+    //
+    public function testCardFileOpen()
+    {
+
+        $cardopen = new Card;
+        $this->assertTrue( @$cardopen->open($this->filename) );
     }
 
 
