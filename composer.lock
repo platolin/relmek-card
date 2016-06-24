@@ -4,9 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "94d34bb10261822b85aa058680b786b6",
-    "content-hash": "ae0e35068131d07e50d2f2e5fd115cfb",
+    "hash": "5f1d34c59318df0a83c1e87550a1a09f",
+    "content-hash": "f7b89421386ae8dfbe882ae0261702fc",
     "packages": [
+        {
+            "name": "simplon/mysql",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fightbulc/simplon_mysql.git",
+                "reference": "c60b96b829b882b8a4d0a631b85a98f489673cd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fightbulc/simplon_mysql/zipball/c60b96b829b882b8a4d0a631b85a98f489673cd8",
+                "reference": "c60b96b829b882b8a4d0a631b85a98f489673cd8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Simplon\\Mysql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me",
+                    "role": "developer"
+                }
+            ],
+            "description": "Simplon MySQL Library",
+            "homepage": "https://github.com/fightbulc/simplon_mysql",
+            "keywords": [
+                "db",
+                "manager",
+                "mysql",
+                "pdo"
+            ],
+            "time": "2016-05-13 14:06:48"
+        }
+    ],
+    "packages-dev": [
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
@@ -310,6 +357,61 @@
                 "stub"
             ],
             "time": "2016-06-07 08:13:47"
+        },
+        {
+            "name": "phpunit/dbunit",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/dbunit.git",
+                "reference": "390cefcb101e07e1d6400dbdfc3b90ecf2c1279f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/dbunit/zipball/390cefcb101e07e1d6400dbdfc3b90ecf2c1279f",
+                "reference": "390cefcb101e07e1d6400dbdfc3b90ecf2c1279f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "ext-simplexml": "*",
+                "php": ">=5.4",
+                "phpunit/phpunit": "~4|~5",
+                "symfony/yaml": "~2.1|~3.0"
+            },
+            "bin": [
+                "dbunit"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "DbUnit port for PHP/PHPUnit to support database interaction testing.",
+            "homepage": "https://github.com/sebastianbergmann/dbunit/",
+            "keywords": [
+                "database",
+                "testing",
+                "xunit"
+            ],
+            "time": "2015-11-03 11:17:01"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1206,51 +1308,6 @@
             "time": "2016-02-04 12:56:52"
         },
         {
-            "name": "simplon/mysql",
-            "version": "1.3.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fightbulc/simplon_mysql.git",
-                "reference": "c60b96b829b882b8a4d0a631b85a98f489673cd8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fightbulc/simplon_mysql/zipball/c60b96b829b882b8a4d0a631b85a98f489673cd8",
-                "reference": "c60b96b829b882b8a4d0a631b85a98f489673cd8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pdo": "*",
-                "php": ">=5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Simplon\\Mysql\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tino Ehrich",
-                    "email": "tino@bigpun.me",
-                    "role": "developer"
-                }
-            ],
-            "description": "Simplon MySQL Library",
-            "homepage": "https://github.com/fightbulc/simplon_mysql",
-            "keywords": [
-                "db",
-                "manager",
-                "mysql",
-                "pdo"
-            ],
-            "time": "2016-05-13 14:06:48"
-        },
-        {
             "name": "symfony/yaml",
             "version": "v3.1.1",
             "source": {
@@ -1349,7 +1406,6 @@
             "time": "2015-08-24 13:29:44"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

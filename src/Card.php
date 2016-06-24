@@ -2,17 +2,18 @@
 
 namespace Relmek;
 
-class Card 
+class Card
 {
-
-	protected $content;
-
+    protected $content;
+    
 	public function open($filename)
 	{
-		$content = fopen($filename, 'r');
+		$content = file($filename);
 		if($content == false) {
 			return false;
-		}
+		}else{
+            return true;
+        }
 
 	}
 }
