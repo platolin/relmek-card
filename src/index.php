@@ -16,8 +16,18 @@ $card = new Card;
 $payin = new Payin;
 
 $card->open(__DIR__.'/../card/card-data.txt');
-
-while ($card_data = $card->pull())
+$count_data = 0;
+do
 {
-    $payin->update_card_data($card_data);
-}
+    $card_data = $card->pull();
+
+    if($card_data)
+    {
+        $payin->update_card_data($card_data);
+        $count_data++;
+    }
+
+} while ( $card_data );
+
+
+echo "total card data transform : ".$count_data ;
