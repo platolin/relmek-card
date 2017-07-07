@@ -31,7 +31,7 @@ class CardTest extends TestCase
     }
     //
     public function testCardFileOpen()
-    {
+    {        
         $cardopen = new Card;
         $card_data = $cardopen->open(self::$filename);
         $this->assertCount( 3,  $card_data);
@@ -72,7 +72,7 @@ class CardTest extends TestCase
 
     public static function tearDownAfterClass()
     {
-        unlink(self::$filename);
+       // unlink(self::$filename);
     }
 }
 ?>
